@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en" dir="ltr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BloxShield — Privacy Policy</title>
+<meta name="robots" content="index,follow">
+<style>
+:root{--bg:#fafafa;--fg:#1b1d22;--muted:#5b6070;--card:#fff;--line:#e3e5ea;--accent:#b2263a}
+@media (prefers-color-scheme:dark){:root{--bg:#14161a;--fg:#e8eaee;--muted:#9aa1b2;--card:#1c1f25;--line:#2b2f38;--accent:#ff6b7f}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.7 system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif}
+.wrap{max-width:780px;margin:0 auto;padding:32px 16px 64px}
+header{direction:ltr;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:8px}
+.brand{font-weight:700;letter-spacing:.2px}
+.brand span{color:var(--accent)}
+.toggle{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--card)}
+.toggle button{border:0;background:transparent;color:var(--fg);padding:6px 16px;font:inherit;font-size:14px;cursor:pointer}
+.toggle button[aria-pressed=true]{background:var(--accent);color:#fff}
+h1{font-size:28px;margin:24px 0 4px}
+.meta{color:var(--muted);font-size:14px;margin:0 0 24px}
+section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:4px 20px;margin:0 0 14px}
+h2{font-size:18px;margin:16px 0 4px}
+p,li{margin:8px 0}
+ul{padding-inline-start:22px;margin:8px 0 16px}
+a{color:var(--accent)}
+footer{color:var(--muted);font-size:13px;margin-top:28px}
+[lang=ar]{direction:rtl;text-align:right}
+.lang{display:none}.lang.on{display:block}
+</style></head>
+<body><div class="wrap">
+<header><div class="brand">🛡️ Blox<span>Shield</span></div>
+<div class="toggle" role="group" aria-label="Language">
+<button data-l="en" aria-pressed="true">English</button>
+<button data-l="ar" aria-pressed="false">العربية</button></div></header>
+<div class="lang" data-l="en" lang="en">
+<h1>Privacy Policy</h1>
+<p class="meta">Effective date: October 10, 2026</p>
+<section><h2>1. Overview</h2>
+<p>BloxShield (“BloxShield”, “we”, “us”) is a Discord bot that lets Roblox game owners moderate their games from Discord. This policy explains what data the bot processes, why, where it is stored, and the choices you have. It applies to Discord servers that use BloxShield (“customers”), their moderators, and the Roblox players moderated through it.</p>
+</section>
+<section><h2>2. Data we process</h2>
+<p><strong>Discord data</strong></p>
+<ul><li>The ID of each Discord server (guild) that uses the bot, and the role IDs the server configures as moderator/admin roles.</li><li>The Discord user ID and username of moderators who run commands, so actions can be attributed (e.g. “banned by”) in logs and history.</li><li>Message content is read only in real time to detect a server's custom command prefix (for example <code>!ban</code>). It is not stored, logged, or used for any other purpose, and is discarded immediately after processing.</li></ul>
+<p><strong>Roblox moderation data</strong></p>
+<ul><li>Roblox user IDs and usernames of players that moderators look up, ban, kick, or unban.</li><li>Ban details: reason, duration, start/expiry time, whether alt accounts were included, and which moderator issued it.</li><li>Ban history for each player and daily moderation counters (number of bans, unbans, kicks).</li><li>In-game presence information written by the tracking script the customer installs in their own game: whether a player is currently in the game, their server ID, join time, and last-seen time.</li></ul>
+<p><strong>Server configuration</strong></p>
+<ul><li>Each customer's Roblox Open Cloud API key, universe ID, place ID, DataStore name, log webhook URL, command prefix, and role IDs.</li><li>Subscription records: server ID, subscription status and expiry date, and an optional administrative note.</li></ul>
+</section>
+<section><h2>3. How we use data</h2>
+<ul><li>To perform moderation actions you request (ban, unban, kick, look up a player, show history and activity).</li><li>To show moderators accurate player and server information and keep an audit trail of actions.</li><li>To check subscription status and provide support.</li><li>To keep the service secure and prevent abuse.</li></ul>
+<p>We do not sell your data, use it for advertising, or use it to train machine-learning or AI models.</p>
+</section>
+<section><h2>4. Where data is stored</h2>
+<ul><li><strong>Roblox DataStores:</strong> ban records, ban history, presence, and activity counters are written to a DataStore in the customer's own Roblox game via the Roblox Open Cloud API. The customer owns and controls that data.</li><li><strong>Bot host:</strong> server configuration (including the Roblox API key) and subscription records are kept in configuration files on the server that runs the bot, accessible only to the BloxShield operator.</li></ul>
+</section>
+<section><h2>5. Sharing</h2>
+<p>We share data only as needed to make the service work, with the platforms it is built on: the Roblox APIs (to apply and read bans and DataStore entries) and Discord (to receive commands and send responses). Moderation log embeds are posted to the log webhook or channel the customer configures. We may disclose information if required by law. We do not share data with any other third parties.</p>
+</section>
+<section><h2>6. Retention and deletion</h2>
+<ul><li>Customers' administrators can delete a player's ban history from Discord (<code>/clearhistory</code> or the history panel).</li><li>Removing a server's configuration deletes its stored settings from the bot host. Data in the customer's Roblox DataStore can be deleted by the customer at any time.</li><li>To request deletion of data we hold about you or your server, contact us on the support server below.</li></ul>
+</section>
+<section><h2>7. Security</h2>
+<p>Access to configuration files is restricted to the operator, and API calls use HTTPS. We recommend customers create Roblox API keys limited to the permissions BloxShield needs and rotate them if they suspect exposure. No system is perfectly secure, and we cannot guarantee absolute security.</p>
+</section>
+<section><h2>8. Children</h2>
+<p>BloxShield is operated by and for game moderators; it is not directed at children. Roblox players, who may include minors, are identified only by their public Roblox ID and username for moderation purposes. Discord requires its users to meet its minimum age.</p>
+</section>
+<section><h2>9. Your choices</h2>
+<p>You can ask us to access, correct, or delete data we hold about you or your server, or stop using the bot by removing it from your Discord server and ceasing use of the tracking script.</p>
+</section>
+<section><h2>10. Changes</h2>
+<p>We may update this policy. The effective date above shows when it was last changed; continued use of BloxShield after an update means you accept it.</p>
+</section>
+<section><h2>11. Contact</h2>
+<p>Questions or requests: <a href="https://discord.gg/vjnKMR4wrw">BloxShield Support Server</a> (https://discord.gg/vjnKMR4wrw).</p>
+</section>
+<footer>© BloxShield. Questions? Contact us in the <a href="https://discord.gg/vjnKMR4wrw">BloxShield Support Server</a>.</footer></div>
+<div class="lang" data-l="ar" lang="ar">
+<h1>سياسة الخصوصية</h1>
+<p class="meta">تاريخ السريان: 10 أكتوبر 2026</p>
+<section><h2>1. نظرة عامة</h2>
+<p>BloxShield («نحن») بوت ديسكورد يتيح لأصحاب ألعاب روبلوكس إدارة ألعابهم والإشراف عليها من ديسكورد. توضح هذه السياسة البيانات التي يعالجها البوت، وسبب معالجتها، وأين تُخزَّن، والخيارات المتاحة لك. تنطبق على سيرفرات ديسكورد التي تستخدم BloxShield («العملاء») ومشرفيها واللاعبين الذين تتم إدارتهم عبره.</p>
+</section>
+<section><h2>2. البيانات التي نعالجها</h2>
+<p><strong>بيانات ديسكورد</strong></p>
+<ul><li>معرّف كل سيرفر ديسكورد يستخدم البوت، ومعرّفات رتب المشرفين والإداريين التي يضبطها السيرفر.</li><li>معرّف مستخدم ديسكورد واسم المشرفين الذين ينفذون الأوامر، لنسب الإجراءات إليهم (مثل «تم الحظر بواسطة») في السجلات والتاريخ.</li><li>تُقرأ محتويات الرسائل لحظياً فقط للتعرف على بادئة الأوامر المخصصة للسيرفر (مثل <code>!ban</code>). لا يتم تخزينها ولا تسجيلها ولا استخدامها لأي غرض آخر، وتُتجاهل فور المعالجة.</li></ul>
+<p><strong>بيانات الإشراف على روبلوكس</strong></p>
+<ul><li>معرّفات وأسماء لاعبي روبلوكس الذين يبحث عنهم المشرفون أو يحظرونهم أو يطردونهم أو يرفعون الحظر عنهم.</li><li>تفاصيل الحظر: السبب، المدة، وقت البداية والانتهاء، وهل شمل الحسابات البديلة، والمشرف الذي أصدره.</li><li>سجل الحظر لكل لاعب وإحصاءات الإشراف اليومية (عدد الحظر ورفع الحظر والطرد).</li><li>معلومات التواجد داخل اللعبة التي يكتبها سكربت التتبع الذي يثبّته العميل في لعبته: هل اللاعب داخل اللعبة حالياً، ومعرّف السيرفر، ووقت الدخول، وآخر ظهور.</li></ul>
+<p><strong>إعدادات السيرفر</strong></p>
+<ul><li>مفتاح Roblox Open Cloud API الخاص بكل عميل، ومعرّف الـ Universe والـ Place، واسم DataStore، ورابط ويب هوك السجلات، والبادئة، ومعرّفات الرتب.</li><li>سجلات الاشتراك: معرّف السيرفر، حالة الاشتراك وتاريخ انتهائه، وملاحظة إدارية اختيارية.</li></ul>
+</section>
+<section><h2>3. كيف نستخدم البيانات</h2>
+<ul><li>لتنفيذ إجراءات الإشراف التي تطلبها (حظر، رفع حظر، طرد، البحث عن لاعب، عرض السجل والنشاط).</li><li>لعرض معلومات دقيقة عن اللاعبين والسيرفرات للمشرفين والاحتفاظ بسجل تدقيق للإجراءات.</li><li>للتحقق من حالة الاشتراك وتقديم الدعم.</li><li>للحفاظ على أمان الخدمة ومنع إساءة الاستخدام.</li></ul>
+<p>نحن لا نبيع بياناتك ولا نستخدمها للإعلانات ولا لتدريب نماذج تعلّم الآلة أو الذكاء الاصطناعي.</p>
+</section>
+<section><h2>4. أين تُخزَّن البيانات</h2>
+<ul><li><strong>Roblox DataStores:</strong> تُكتب سجلات الحظر وتاريخه والتواجد وإحصاءات النشاط في DataStore تابع للعبة العميل عبر Roblox Open Cloud API. العميل هو مالك هذه البيانات والمتحكم بها.</li><li><strong>خادم البوت:</strong> تُحفظ إعدادات السيرفر (بما فيها مفتاح Roblox API) وسجلات الاشتراك في ملفات إعدادات على الخادم الذي يشغّل البوت، ولا يصل إليها إلا مشغّل BloxShield.</li></ul>
+</section>
+<section><h2>5. المشاركة</h2>
+<p>لا نشارك البيانات إلا بالقدر اللازم لعمل الخدمة مع المنصتين التي تقوم عليهما: واجهات روبلوكس (لتطبيق الحظر وقراءة بيانات DataStore) وديسكورد (لاستقبال الأوامر وإرسال الردود). تُنشر رسائل سجلات الإشراف في الويب هوك أو القناة التي يحددها العميل. وقد نفصح عن معلومات إذا ألزمنا القانون بذلك. ولا نشارك البيانات مع أي أطراف ثالثة أخرى.</p>
+</section>
+<section><h2>6. الاحتفاظ والحذف</h2>
+<ul><li>يستطيع إداريو العميل حذف سجل حظر أي لاعب من ديسكورد (<code>/clearhistory</code> أو لوحة السجل).</li><li>إزالة إعدادات السيرفر تحذف إعداداته المخزنة من خادم البوت. ويستطيع العميل حذف بيانات DataStore الخاصة بلعبته في أي وقت.</li><li>لطلب حذف بيانات نحتفظ بها عنك أو عن سيرفرك، تواصل معنا عبر سيرفر الدعم أدناه.</li></ul>
+</section>
+<section><h2>7. الأمان</h2>
+<p>الوصول إلى ملفات الإعدادات مقتصر على المشغّل، وتتم جميع طلبات الـ API عبر HTTPS. ننصح العملاء بإنشاء مفاتيح Roblox API بأقل الصلاحيات التي يحتاجها BloxShield وتغييرها عند الاشتباه في تسريبها. لا يوجد نظام آمن تماماً، ولا يمكننا ضمان أمان مطلق.</p>
+</section>
+<section><h2>8. الأطفال</h2>
+<p>BloxShield مخصص لمشرفي الألعاب وليس موجهاً للأطفال. يتم التعرف على لاعبي روبلوكس، وقد يكون بينهم قاصرون، من خلال معرّفهم واسمهم العام فقط لأغراض الإشراف. وتشترط ديسكورد حداً أدنى للعمر لمستخدميها.</p>
+</section>
+<section><h2>9. خياراتك</h2>
+<p>يمكنك طلب الاطلاع على بياناتك أو بيانات سيرفرك أو تصحيحها أو حذفها، أو التوقف عن استخدام البوت بإزالته من سيرفر ديسكورد وإيقاف سكربت التتبع.</p>
+</section>
+<section><h2>10. التغييرات</h2>
+<p>قد نحدّث هذه السياسة. يوضح تاريخ السريان أعلاه آخر تعديل، واستمرارك في استخدام BloxShield بعد التحديث يعني موافقتك عليه.</p>
+</section>
+<section><h2>11. التواصل</h2>
+<p>للاستفسارات والطلبات: <a href="https://discord.gg/vjnKMR4wrw">سيرفر دعم BloxShield</a> (https://discord.gg/vjnKMR4wrw).</p>
+</section>
+<footer>© BloxShield. للاستفسار تواصل معنا عبر <a href="https://discord.gg/vjnKMR4wrw">سيرفر دعم BloxShield</a>.</footer></div>
+</div><script>
+const btns=document.querySelectorAll('.toggle button');
+function setLang(l){
+  document.documentElement.lang=l;
+  document.querySelectorAll('.lang').forEach(e=>e.classList.toggle('on',e.dataset.l===l));
+  btns.forEach(b=>b.setAttribute('aria-pressed',b.dataset.l===l));
+  try{localStorage.setItem('bs-lang',l)}catch(e){}
+}
+let saved=null;try{saved=localStorage.getItem('bs-lang')}catch(e){}
+const initial=location.hash==='#ar'?'ar':location.hash==='#en'?'en':(saved||(navigator.language||'').startsWith('ar')?'ar':'en');
+btns.forEach(b=>b.addEventListener('click',()=>{setLang(b.dataset.l);history.replaceState(null,'','#'+b.dataset.l)}));
+setLang(initial);
+addEventListener('hashchange',()=>{if(location.hash==='#ar')setLang('ar');if(location.hash==='#en')setLang('en')});
+</script></body></html>
